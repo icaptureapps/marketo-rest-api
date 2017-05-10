@@ -23,7 +23,7 @@ class Response implements ResponseClassInterface
     /**
      * @var array
      */
-    protected $data;
+    public $data;
 
     /**
      * @param $data
@@ -37,7 +37,7 @@ class Response implements ResponseClassInterface
      * @return array|null
      */
     public function getResult()
-    {
+    {      
         return isset($this->data['result'])? $this->data['result']: null;
     }
 

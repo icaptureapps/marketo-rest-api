@@ -102,7 +102,8 @@
                 "fields": {"location": "query"}
             },
             "responseClass": "CSD\\Marketo\\Response\\GetLeadResponse"
-        },
+        },        
+       
         "getCampaigns": {
             "httpMethod": "GET",
             "uri": "campaigns.json",
@@ -216,6 +217,12 @@
             "uri": "leads/partitions.json",
             "parameters": {},
             "responseClass": "CSD\\Marketo\\Response\\GetLeadPartitionsResponse"
+        },
+         "getLeadDescription": {
+            "httpMethod": "GET",
+            "uri": "leads/describe.json",
+            "parameters": {},
+            "responseClass": "CSD\\Marketo\\Response\\GetLeadDescriptionResponse"
         },
         "updateEmailContent": {
             "httpMethod": "POST",

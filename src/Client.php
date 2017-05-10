@@ -27,6 +27,7 @@ use CSD\Marketo\Response\GetCampaignsResponse;
 use CSD\Marketo\Response\GetLeadResponse;
 use CSD\Marketo\Response\GetLeadPartitionsResponse;
 use CSD\Marketo\Response\GetLeadsResponse;
+use CSD\Marketo\Response\GetLeadDescriptionResponse;
 use CSD\Marketo\Response\GetListResponse;
 use CSD\Marketo\Response\GetListsResponse;
 use CSD\Marketo\Response\IsMemberOfListResponse;
@@ -360,6 +361,20 @@ class Client extends GuzzleClient
     {
         return $this->getResult('getLeadPartitions', $args, false, $returnRaw);
     }
+
+
+    /**
+     * Get lead description.
+     *
+     * @link http://developers.marketo.com/documentation/rest/describe/
+     *
+     * @return GetLeadDescriptionResponse
+     */
+    public function getLeadDescription($args = array(), $returnRaw = false)
+    {
+        return $this->getResult('getLeadDescription', $args, false, $returnRaw);
+    }
+
 
     /**
      * Get multiple leads by list ID.
